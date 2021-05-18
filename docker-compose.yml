@@ -1,0 +1,47 @@
+version: '3.3'
+
+services:
+  apache:
+    build: ./apache
+    #restart: always
+    ports:
+      - 80:80 # physical port : container port
+      - 443:443  # physical port : container port
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    volumes:
+      - ./apache/data:/var/www:rw
+    networks:
+      - lampnet
+  
+  mariadb:
+    image: mariadb:10.4.6
+    #restart: always
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mariadb/data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=temperature_record
+      - TZ=Asia/Taipei
+    command: ['--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci']
+    networks:
+      - lampnet
+
+  adminer:
+    image: adminer:4
+    #restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - mariadb
+    networks:
+      - lampnet
+
+volumes:
+  homepage:
+
+networks:
+  lampnet:
+    driver: bridge
