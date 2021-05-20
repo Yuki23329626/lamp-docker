@@ -14,13 +14,13 @@ services:
     networks:
       - lampnet
   
-  mariadb:
+  db:
     image: mariadb:10.4.6
     #restart: always
     ports:
       - 3306:3306
     volumes:
-      - ./mariadb/data:/var/lib/mysql
+      - ./db/data:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
       - MYSQL_DATABASE=temperature_record
@@ -30,12 +30,16 @@ services:
       - lampnet
 
   adminer:
-    image: adminer:4
+    build: ./adminer
     #restart: always
     ports:
       - 8080:8080
+    environment:
+      DB_SSL_KEY: '/ssl/private.key'
+      DB_SSL_CERT: '/ssl/certificate.crt'
+      DB_SSL_CA: '/ssl/ca_bundle.crt'
     depends_on:
-      - mariadb
+      - db
     networks:
       - lampnet
 
