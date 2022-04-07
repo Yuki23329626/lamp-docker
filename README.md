@@ -97,7 +97,7 @@ sh stop.sh
 
 
 ## Important Notes  
-一、There are several difference between apache 2.2 and apache 2.4  
+一、There are several differences between apache 2.2 and apache 2.4  
 1. The config files are move into /etc/apache2/ in apache 2.4  
 2. The config file of http host is /etc/apache2/sites-available/000-default.conf  
 3. You can edit /etc/apache2/apache2.conf to enable https service  
