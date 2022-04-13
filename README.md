@@ -74,10 +74,16 @@ sh build.sh
 
 ## Attach to container's bash  
 
-Get into your apache container  
+Access to the bash of your apache container  
 
 ```bash
 sh attach.sh
+```
+
+If you want to exit the container, just type "exit" in bash  
+
+```bash
+exit
 ```
 
 ## Check the logs on Apache  
@@ -86,12 +92,6 @@ If you want to check the logs while testing the website, you can use the followi
 
 ```bash
 sh get_apache_log.sh
-```
-
-If you want to exit the container, just type "exit" in bash  
-
-```bash
-exit
 ```
 
 ## Stop the containers  
