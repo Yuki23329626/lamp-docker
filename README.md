@@ -9,7 +9,7 @@ Install following tools in your physical environment:
 
 ## Notice
 - This project is only tested on AWS EC2 instance of ubuntu 18.04 and it is worked
-- The container of mariadb is not functional on Linode instance of Debian 11, the root user is unable to log into mariadb's SQL shell
+- The container of mariadb is not functional on Linode instance of Debian 11, the root user is unable to log into mariadb's SQL shell  
 when you try to build up the docker container through the docker-compose,  
 while you can access to the mariadb's SQL shell through the one-lined docker command.
 
