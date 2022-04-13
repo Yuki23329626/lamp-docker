@@ -37,7 +37,7 @@ services:
 ```
 You can change your setting in the ./docker-compose.yml  
 
-If it doesn't work, you should check your firewall setting in you physical environment.  
+If it doesn't work, you should check your firewall setting in your physical environment.  
 
 ## SSL/TLS Setting
 This project is default turning on the https service  
