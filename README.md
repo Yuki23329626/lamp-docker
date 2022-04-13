@@ -7,6 +7,12 @@ Install following tools in your physical environment:
 - [docker](https://docs.docker.com/get-docker/)
 - [docker-compose](https://docs.docker.com/compose/install/)
 
+## Notice
+- This project is only tested on AWS EC2 instance of ubuntu 18.04 and it is worked
+- The container of mariadb is not functional on Linode, the root user is unable to log into the mysql  
+when you try to build up the docker container through the docker-compose,  
+while you can access to the mariadb's mysql command line through the one-lined docker command.
+
 ## Port Setting
 
 I use "80:80" and "443:443" as the port setting of the container.  
