@@ -41,6 +41,7 @@ If it doesn't work, you should check your firewall setting in your physical envi
 
 ## SSL/TLS Setting
 This project is default turning on the https service  
+You should put the relative ssl files under the ./apache/ssl/  and rename them properly  
 If you don't want to use ssl/tls, you can modify the config file in the ./apache/conf/apache2.conf  
 
 ```xml
