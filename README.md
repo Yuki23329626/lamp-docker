@@ -112,7 +112,7 @@ sh stop.sh
 4. If you want to view your directories in index form in /var/www/html on the web page,  
 you need to add some setting in the block of \<Directory /var/www/html\> in ./apache/conf/apache2.conf  
 	
-```
+```xml
 LoadModule ssl_module /usr/lib/apache2/modules/mod_ssl.so
 
 Listen 443
