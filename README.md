@@ -21,6 +21,26 @@ log into mariadb's SQL shell when you try to build up the docker container throu
 while you can access to the mariadb's SQL shell through the one-lined docker command.
 - For more information about the docker image of mariadb you can check on [DockerHub](https://hub.docker.com/_/mariadb)
 
+## SQL database password setting  
+
+Export the password permenant by editing the file .bashrc:  
+
+```bash
+vim .bashrc
+```
+
+Add the following line in the file .bashrc:  
+
+```
+export MYSQL_ROOT_PASSWORD=<thePasswordYouWant>
+```
+
+Reload the file:  
+
+```
+source .bashrc
+```
+
 ## Port Setting
 
 I use "80:80" and "443:443" as the port setting of the container.  
