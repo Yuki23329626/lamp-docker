@@ -4,7 +4,7 @@ Useful in testing a website.
  
 ## Requirements
 Install following tools in your physical environment:  
-- [docker](https://docs.docker.com/get-docker/)
+- [docker](https://docs.docker.com/engine/install/ubuntu/)
 - [docker-compose](https://docs.docker.com/compose/install/)
 
 ## Notice
