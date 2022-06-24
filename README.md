@@ -87,12 +87,24 @@ Listen 443
         	AllowOverride None
 		Require all granted
     	</Directory>
-	SSLCertificateFile "/etc/apache2/ssl/certificate.crt"
-	SSLCertificateKeyFile "/etc/apache2/ssl/private.key"
-	SSLCACertificateFile "/etc/apache2/ssl/ca_bundle.crt"
+	SSLCertificateFile "/etc/apache2/ssl/fullchain.pem"
+	SSLCertificateKeyFile "/etc/apache2/ssl/privkey1.pem"
+#	SSLCACertificateFile "/etc/apache2/ssl/ca_bundle.crt"
 </VirtualHost>
 # comment the above lines if you don't want to use ssl/tls
 ```
+
+## Get the certificate files
+
+1. Install the certbot
+
+```bash
+sudo apt-get update
+sudo apt-get install -y certbot
+sudo certbot certonly -d <yourDomainName>
+```
+
+2. Following the instruction of the certbot to get the ssl files
 
 ## Build up the containers  
 
