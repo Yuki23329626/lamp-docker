@@ -25,7 +25,7 @@ The container of mariadb is functional on Linode instance of Ubuntu 22.04 LTS.
 
 ## SQL database password setting  
 
-Export the password permenant by editing the file .bashrc:  
+Set the password of database permenantly by editing the file .bashrc:  
 
 ```bash
 vim .bashrc
