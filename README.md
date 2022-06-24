@@ -7,7 +7,7 @@ Install following tools in your physical environment:
 - [docker](https://docs.docker.com/engine/install/ubuntu/)
 - [docker-compose](https://docs.docker.com/compose/install/)  
 
-Download and install Compose standalone version:  
+Download and install docker-compose standalone version:  
 
 ```bash
 curl -SL https://github.com/docker/compose/releases/download/v2.6.1/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
