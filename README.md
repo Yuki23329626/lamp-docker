@@ -87,7 +87,7 @@ Listen 443
         	AllowOverride None
 		Require all granted
     	</Directory>
-	SSLCertificateFile "/etc/apache2/ssl/fullchain.pem"
+	SSLCertificateFile "/etc/apache2/ssl/fullchain1.pem"
 	SSLCertificateKeyFile "/etc/apache2/ssl/privkey1.pem"
 #	SSLCACertificateFile "/etc/apache2/ssl/ca_bundle.crt"
 </VirtualHost>
