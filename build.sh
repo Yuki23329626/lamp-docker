@@ -12,12 +12,20 @@ then
   exit 0
 fi
 
+if [ "$DOMAIN_NAME" = "" ]
+then
+  echo "\nYou should set your $DOMAIN_NAME at first"
+  echo "\ne.g.: export DOMAIN_NAME=\"the_domain_name_you_want\"\n"
+  exit 0
+fi
+
+
 echo "building container..."
 docker-compose up --build -d
 
-SSL_crt=$(ls ./apache/ssl/ | grep certificate.crt)
-SSL_key=$(ls ./apache/ssl/ | grep private.key)
-SSL_ca=$(ls ./apache/ssl/ | grep ca_bundle.crt)
+SSL_crt=$(ls ./apache/ssl/ | grep fullchain1.pem)
+SSL_key=$(ls ./apache/ssl/ | grep privkey1.pem)
+#SSL_ca=$(ls ./apache/ssl/ | grep ca_bundle.crt)
 
 if [ -z "$SSL_crt" ] || [ -z "$SSL_key" ]
 then 

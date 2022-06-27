@@ -11,6 +11,7 @@ services:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     volumes:
       - ./apache/data:/var/www:rw
+      - /etc/letsencrypt/archive/${DOMAIN_NAME}:/etc/apache2/ssl/
     networks:
       - lampnet
   
