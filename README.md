@@ -49,7 +49,7 @@ I use "80:80" and "443:443" as the port setting of the container.
 Port 80 and 443 is the default setting for http and https protocol in Apache server.  
 but you need to map the ports between your physical server and Apache server in a container.  
 In docker-compose.yml it will be in this format:  
-```yaml
+```yml
 services:
 apache:
     build: ./apache
@@ -154,7 +154,7 @@ sh stop.sh
 4. If you want to view your directories in index form in /var/www/html on the web page,  
 you need to add some setting in the block of \<Directory /var/www/html\> in ./apache/conf/apache2.conf  
 	
-```conf
+```xml
 LoadModule ssl_module /usr/lib/apache2/modules/mod_ssl.so
 
 Listen 443
