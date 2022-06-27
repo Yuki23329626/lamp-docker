@@ -51,16 +51,17 @@ but you need to map the ports between your physical server and Apache server in 
 In docker-compose.yml it will be in this format:  
 ```yaml
 services:
-  apache:
+apache:
     build: ./apache
     #restart: always
     ports:
       - 80:80 # physical port : container port
-      - 443:443 # physical port : container port
+      - 443:443  # physical port : container port
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     volumes:
-      - ./apache/data:/var/www/html:rw
+      - ./apache/data:/var/www:rw
+      - /etc/letsencrypt/archive/${DOMAIN_NAME}:/etc/apache2/ssl/
     networks:
       - lampnet
 ```
