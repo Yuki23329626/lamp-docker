@@ -19,9 +19,10 @@ then
   exit 0
 fi
 
+current=$(date +_%Y-%m-%d-%T -d "+8 hour")
 
 echo "building container..."
-docker-compose up --build -d
+docker-compose up --build -d > log/log_build$current.log
 
 SSL_crt=$(ls ./apache/ssl/ | grep fullchain1.pem)
 SSL_key=$(ls ./apache/ssl/ | grep privkey1.pem)
