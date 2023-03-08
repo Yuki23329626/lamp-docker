@@ -5,7 +5,8 @@ Useful in testing a website.
 ## Requirements
 Install following tools in your physical environment:  
 - [docker](https://docs.docker.com/engine/install/ubuntu/)
-- [docker-compose](https://docs.docker.com/compose/install/)  
+- [docker-compose_old](https://docs.docker.com/compose/install/)  
+- [docker-compose](https://docs.docker.com/compose/install/linux/#install-the-plugin-manually)
 
 Download and install docker-compose standalone version:  
 
