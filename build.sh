@@ -14,7 +14,7 @@ fi
 
 if [ "$DOMAIN_NAME" = "" ]
 then
-  echo "\nYou should set your $DOMAIN_NAME at first"
+  echo "\nYou should set your DOMAIN_NAME at first"
   echo "\ne.g.: export DOMAIN_NAME=\"the_domain_name_you_want\"\n"
   exit 0
 fi
