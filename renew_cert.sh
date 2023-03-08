@@ -6,4 +6,4 @@
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 
 certbot renew
-cp /etc/letsencrypt/archive/michaelshen.csie.io/* ./apache/ssl/
+cp /etc/letsencrypt/live/michaelshen.csie.io/* ./apache/ssl/

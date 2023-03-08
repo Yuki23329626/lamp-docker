@@ -75,6 +75,12 @@ This project is default turning on the https service
 You should put the relative ssl files under the ./apache/ssl/  and rename them properly  
 If you don't want to use ssl/tls, you can modify the config file in the ./apache/conf/apache2.conf  
 
+```bash
+# using certbot
+# should install certbot first
+sudo certbot --standalone certonly
+```
+
 ```xml
 # comment the following lines if you don't want to use ssl/tls
 LoadModule ssl_module /usr/lib/apache2/modules/mod_ssl.so
