@@ -24,8 +24,8 @@ current=$(date +_%Y-%m-%d-%T -d "+8 hour")
 echo "building container..."
 docker-compose up --build -d > log/log_build$current.log
 
-SSL_crt=$(ls ./apache/ssl/ | grep fullchain1.pem)
-SSL_key=$(ls ./apache/ssl/ | grep privkey1.pem)
+SSL_crt=$(ls /etc/letsencrypt/archive/$DOMAIN_NAME | grep fullchain1.pem)
+SSL_key=$(ls /etc/letsencrypt/archive/$DOMAIN_NAME | grep privkey1.pem)
 #SSL_ca=$(ls ./apache/ssl/ | grep ca_bundle.crt)
 
 if [ -z "$SSL_crt" ] || [ -z "$SSL_key" ]

@@ -72,7 +72,9 @@ If it doesn't work, you should check your firewall setting in your physical envi
 
 ## SSL/TLS Setting
 This project is default turning on the https service  
-You should put the relative ssl files under the ./apache/ssl/  and rename them properly  
+<strike>You should put the relative ssl files under the ./apache/ssl/  and rename them properly</strike>  
+By using certbot to create the certificates, the files will store in /etc/letsencrypt/archive/${DOMAIN_NAME},  
+and the directory is the volume of the apache container, where is the directory to place your certificates  
 If you don't want to use ssl/tls, you can modify the config file in the ./apache/conf/apache2.conf  
 
 ```bash
