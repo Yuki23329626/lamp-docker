@@ -1,4 +1,5 @@
-FROM php:7.3.25-apache-stretch
+#FROM php:7.3.25-apache-stretch
+FROM php:7.3.25-apache
 
 RUN apt-get update -y
 RUN apt-get install -y vim
@@ -7,7 +8,7 @@ RUN apt-get install -y vim
 #RUN mkdir /etc/apache2/ssl
 
 # Other PHP7 Extensions
-RUN apt-get -y install libsqlite3-dev libsqlite3-0 mysql-client
+#RUN apt-get -y install libsqlite3-dev libsqlite3-0 mysql-client
 RUN docker-php-ext-install mysqli
 
 # Enable apache modules
