@@ -7,7 +7,8 @@ Install following tools in your physical environment:
 - [docker](https://docs.docker.com/engine/install/ubuntu/)  
 - 2023/09/01 update  
   Following the guidance of docker installation, it will also install the docker compose plug-in,  
-  thus no need to install the stand-alone version of docker-composer  
+  thus no need to install the stand-alone version of docker-composer
+  
 <strike>- [docker-compose_old](https://docs.docker.com/compose/install/)  </strike>  
 <strike>- [docker-compose](https://docs.docker.com/compose/install/linux/#install-the-plugin-manually)</strike>  
 
