@@ -6,30 +6,32 @@ Useful in testing a website.
 Install following tools in your physical environment:  
 - [docker](https://docs.docker.com/engine/install/ubuntu/)  
 - 2023/09/01 update  
-  Following the guidance of docker installation, it will also install the docker compose plug-in,  
-  thus no need to install the stand-alone version of docker-composer  
+  Following the guidance of docker installation, it will also install the docker-compose plug-in,  
+  there is no need to install the standalone version of docker-composer
 - <strike>[docker-compose_old](https://docs.docker.com/compose/install/)</strike>  
 - <strike>[docker-compose](https://docs.docker.com/compose/install/linux/#install-the-plugin-manually)</strike>  
 
+<strike>
 Download and install docker-compose standalone version:  
 
 ```bash
 curl -SL https://github.com/docker/compose/releases/download/v2.6.1/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 ```
+</strike>
 
 ## Notice
-- This project is only tested on AWS EC2 instance of ubuntu 18.04 and it is worked  
-<strike>- The container of mariadb is not functional on Linode instance of Debian 11, the root user is unable to  
+- This project is only tested on the AWS EC2 instance of ubuntu 18.04 and it worked  
+<strike>- The container of MariaDB is not functional on the Linode instance of Debian 11, the root user is unable to  
 log into mariadb's SQL shell when you try to build up the docker container through the docker-compose,  
-while you can access to the mariadb's SQL shell through the one-lined docker command.</strike>
+while you can access to the MariaDB's SQL shell through the one-lined docker command.</strike>
 - 2022/06/24 update  
-The container of mariadb is functional on Linode instance of Ubuntu 22.04 LTS.  
-- For more information about the docker image of mariadb you can check on [DockerHub](https://hub.docker.com/_/mariadb)
+The container of MariaDB is functional on the Linode instance of Ubuntu 22.04 LTS.  
+- For more information about the docker image of MariaDB you can check on [DockerHub](https://hub.docker.com/_/mariadb)
 
 ## SQL database password setting  
 
-Set the password of database permenantly by editing the file .bashrc:  
+Set the password of the database permanently by editing the file .bashrc:  
 
 ```bash
 vim .bashrc
