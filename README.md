@@ -9,8 +9,8 @@ Install following tools in your physical environment:
   Following the guidance of docker installation, it will also install the docker compose plug-in,  
   thus no need to install the stand-alone version of docker-composer
   
-<strike>- [docker-compose_old](https://docs.docker.com/compose/install/)  </strike>  
-<strike>- [docker-compose](https://docs.docker.com/compose/install/linux/#install-the-plugin-manually)</strike>  
+- <strike>[docker-compose_old](https://docs.docker.com/compose/install/)</strike>  
+- <strike>[docker-compose](https://docs.docker.com/compose/install/linux/#install-the-plugin-manually)</strike>  
 
 Download and install docker-compose standalone version:  
 
