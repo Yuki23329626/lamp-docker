@@ -22,7 +22,7 @@ fi
 current=$(date +_%Y-%m-%d-%T -d "+8 hour")
 
 echo "building container..."
-docker-compose up --build -d > log/log_build$current.log
+docker compose up --build -d > log/log_build$current.log
 
 SSL_crt=$(ls /etc/letsencrypt/archive/$DOMAIN_NAME | grep fullchain1.pem)
 SSL_key=$(ls /etc/letsencrypt/archive/$DOMAIN_NAME | grep privkey1.pem)
